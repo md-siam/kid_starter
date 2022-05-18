@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kid_starter/app/widgets/audio_player.dart';
 
 import 'app/constant.dart';
 import 'app/screens/home_screen.dart';
@@ -20,8 +19,8 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: kBodyTextColor),
         ),
       ),
-      //home: const HomeScreen(),
-      home: const MyAudioPlayer(),
+      home: const HomeScreen(),
+      //home: const MyAudioPlayer(),
     );
   }
 }
