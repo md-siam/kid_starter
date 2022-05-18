@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'app/constant.dart';
-import 'app/screens/home_screen.dart';
+import 'app/splash_screen.dart';
 
 void main() {
   // For disabling landscape view
@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: kBodyTextColor),
         ),
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
+      //home: const HomeScreen(),
       //home: const MyAudioPlayer(),
     );
   }
