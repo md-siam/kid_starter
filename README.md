@@ -1,9 +1,11 @@
 <img src="screenshots/badges/built-with-love.svg" height="28px"/>&nbsp;&nbsp;
 <img src="screenshots/badges/flutter-dart.svg" height="28px" />&nbsp;&nbsp;
 <a href="https://choosealicense.com/licenses/mit/" target="_blank"><img src="screenshots/badges/license-MIT.svg" height="28px" /></a>&nbsp;&nbsp;
-<img src="screenshots/badges/dart-null_safety-blue.svg" height="28px"/>
+<img src="screenshots/badges/Flutter-3.svg" height="28px" />&nbsp;&nbsp;
+<img src="screenshots/badges/dart-null_safety-blue.svg" height="28px"/>&nbsp;&nbsp;
 
 # Kid Starter
+
 <img align="right" src="screenshots/store_icons/playstore.png" height="200"></img>
 This application is an updated version of "[flutter_kid_starter](https://github.com/quangrau/flutter_kid_starter)" from - quangrau. I am using Flutter 3.0 SDK to update this awesome open-source application.
 
