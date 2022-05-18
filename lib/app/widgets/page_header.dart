@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../constant.dart';
 
@@ -40,14 +41,16 @@ class PageHeader extends StatelessWidget {
               alignment: Alignment.topLeft,
               child: GestureDetector(
                 onTap: () {
+                  HapticFeedback.lightImpact();
                   Navigator.pop(context);
                 },
                 child: const Text(
                   '<<',
                   style: TextStyle(
-                      fontSize: 42,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700),
+                    fontSize: 42,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),

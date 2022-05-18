@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 import '../constant.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -16,9 +19,10 @@ class CategoryCard extends StatelessWidget {
   }) : super(key: key);
 
   void _navigate(BuildContext context, Widget screen) {
+    HapticFeedback.lightImpact();
     Navigator.push(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) {
           return screen;
         },
