@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:kid_starter/app/widgets/audio_player.dart';
 
-import 'app/views/home/home_page.dart';
+import 'app/constant.dart';
+import 'app/screens/home_screen.dart';
 
-void main() {
-  return runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -13,9 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kid Starter',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomePage(),
-     
+      theme: ThemeData(
+        scaffoldBackgroundColor: kBackgroundColor,
+        fontFamily: "CabinSketch",
+        textTheme: const TextTheme(
+          bodyText1: TextStyle(color: kBodyTextColor),
+        ),
+      ),
+      //home: const HomeScreen(),
+      home: const MyAudioPlayer(),
     );
   }
 }
