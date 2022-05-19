@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 // Colors
@@ -31,3 +32,14 @@ const kTitleTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
   fontFamily: 'CabinSketch',
 );
+
+
+// Helper functions
+Color getRandomColor({double opacity = 0.8}) {
+  return Colors.primaries[Random().nextInt(Colors.primaries.length)]
+      .withOpacity(opacity);
+}
+
+Color getIndexColor(int index, {double opacity = 0.8}) {
+  return Colors.primaries[index % Colors.primaries.length].withOpacity(opacity);
+}
