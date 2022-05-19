@@ -19,10 +19,10 @@ This application is using one third-party package from the open-source community
 ```
 
  <p align="center">
-    <a href="https://md-siam.github.io/puzzle_hack/" target="_blank"><img src="screenshots/download_apk/download.png" height="100" ></img></a>
+    <a href="https://drive.google.com/file/d/1LRT5_7tbE552yoSTRp5EHK6qRqbZaJFO/view?usp=sharing" target="_blank"><img src="screenshots/download_apk/download.png" height="100" ></img></a>
   </p>
 
-## Kid Starter App Demo
+## App Demo
 
 <p align="center"><img src="screenshots/gif/demo.gif"></p>
 
