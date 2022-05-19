@@ -19,7 +19,7 @@ class StoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: <Widget>[
+        children: [
           PageHeader(
             title: title,
             primaryColor: primaryColor,
@@ -29,9 +29,7 @@ class StoriesScreen extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               'Coming soon...',
-              style: kSubTextStyle.copyWith(
-                fontSize: 24,
-              ),
+              style: kSubTextStyle.copyWith(fontSize: 24),
             ),
           ),
         ],
