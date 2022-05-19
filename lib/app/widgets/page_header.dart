@@ -8,12 +8,14 @@ class PageHeader extends StatefulWidget {
   final String title;
   final Color primaryColor;
   final Color secondaryColor;
+  final double offset;
 
   const PageHeader({
     Key? key,
     required this.title,
     required this.primaryColor,
     required this.secondaryColor,
+    required this.offset,
   }) : super(key: key);
 
   @override
@@ -60,7 +62,6 @@ class _PageHeaderState extends State<PageHeader> {
           ),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Align(
               alignment: Alignment.topLeft,
@@ -80,19 +81,17 @@ class _PageHeaderState extends State<PageHeader> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
             Expanded(
               child: Stack(
+                alignment: Alignment.center,
                 children: [
-                  Container(
-                    height: 80,
-                    alignment: Alignment.center,
+                  Positioned(
+                    top: 30 - widget.offset / 4,
                     child: Text(
                       widget.title,
                       style: kHeadingTextStyle,
                     ),
                   ),
-                  Container(),
                 ],
               ),
             ),

@@ -28,6 +28,12 @@ class _AlphabetEnScreenState extends State<AlphabetEnScreen> {
   double offset = 0;
 
   @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(onScroll);
+  }
+
+  @override
   void dispose() {
     _scrollController.dispose();
     _audioPlayer.dispose();
@@ -61,6 +67,7 @@ class _AlphabetEnScreenState extends State<AlphabetEnScreen> {
               title: widget.title,
               primaryColor: widget.primaryColor,
               secondaryColor: widget.secondaryColor,
+              offset: offset,
             ),
           ),
           SliverGrid(

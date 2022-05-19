@@ -28,6 +28,12 @@ class _ColorScreenState extends State<ColorScreen> {
   double offset = 0;
 
   @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(onScroll);
+  }
+
+  @override
   void dispose() {
      _scrollController.dispose();
     _audioPlayer.dispose();
@@ -62,6 +68,7 @@ class _ColorScreenState extends State<ColorScreen> {
               title: widget.title,
               primaryColor: widget.primaryColor,
               secondaryColor: widget.secondaryColor,
+              offset: offset,
             ),
           ),
           SliverGrid(

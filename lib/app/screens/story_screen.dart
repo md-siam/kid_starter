@@ -24,6 +24,12 @@ class _StoriesScreenState extends State<StoriesScreen> {
   double offset = 0;
 
   @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(onScroll);
+  }
+
+  @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
@@ -47,6 +53,7 @@ class _StoriesScreenState extends State<StoriesScreen> {
               title: widget.title,
               primaryColor: widget.primaryColor,
               secondaryColor: widget.secondaryColor,
+              offset: offset,
             ),
           ),
           SliverGrid(
