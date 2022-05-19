@@ -23,12 +23,21 @@ class NumericEnScreen extends StatefulWidget {
 }
 
 class _NumericEnScreenState extends State<NumericEnScreen> {
+  final _scrollController = ScrollController();
   final _audioPlayer = AudioPlayer();
+  double offset = 0;
 
   @override
   void dispose() {
+    _scrollController.dispose();
     _audioPlayer.dispose();
     super.dispose();
+  }
+
+  void onScroll() {
+    setState(() {
+      offset = (_scrollController.hasClients) ? _scrollController.offset : 0;
+    });
   }
 
   void _playAudio(String assetPath) async {
@@ -39,26 +48,29 @@ class _NumericEnScreenState extends State<NumericEnScreen> {
       debugPrint("Error loading audio source: $e");
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          PageHeader(
-            title: widget.title,
-            primaryColor: widget.primaryColor,
-            secondaryColor: widget.secondaryColor,
+      body: CustomScrollView(
+        controller: _scrollController,
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: PageHeader(
+              title: widget.title,
+              primaryColor: widget.primaryColor,
+              secondaryColor: widget.secondaryColor,
+            ),
           ),
-          Expanded(
-            child: GridView.builder(
-              physics: const BouncingScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 20.0,
-              ),
-              itemCount: numericEnList.length,
-              itemBuilder: (BuildContext context, int index) {
+          SliverGrid(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 20.0,
+            ),
+            delegate: SliverChildBuilderDelegate(
+              childCount: numericEnList.length,
+              (context, index) {
                 return Padding(
                   padding: index % 2 == 0
                       ? const EdgeInsets.only(bottom: 20, left: 20)
