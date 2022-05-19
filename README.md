@@ -18,7 +18,11 @@ This application is using one third-party package from the open-source community
   just_audio: ^0.9.21   //For playing audio files
 ```
 
-## Tip Calculator App Demo
+ <p align="center">
+    <a href="https://md-siam.github.io/puzzle_hack/" target="_blank"><img src="screenshots/download_apk/download.png" height="100" ></img></a>
+  </p>
+
+## Kid Starter App Demo
 
 <p align="center"><img src="screenshots/gif/demo.gif"></p>
 
