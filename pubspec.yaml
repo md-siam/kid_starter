@@ -66,6 +66,7 @@ flutter:
   assets:
     - assets/data/
     - assets/audio/intro/
+    - assets/audio/screen_transition/
     - assets/audio/alphabet_en/
     - assets/audio/color/
     - assets/audio/numeric_en/

@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:just_audio/just_audio.dart';
 
 import '../constant.dart';
 
-class CategoryCard extends StatelessWidget {
+class CategoryCard extends StatefulWidget {
   final String title;
   final Color primaryColor;
   final Color secondaryColor;
@@ -18,7 +19,32 @@ class CategoryCard extends StatelessWidget {
     required this.screen,
   }) : super(key: key);
 
+  @override
+  State<CategoryCard> createState() => _CategoryCardState();
+}
+
+class _CategoryCardState extends State<CategoryCard> {
+  final _audioPlayer = AudioPlayer();
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose();
+    super.dispose();
+  }
+
+  void _pushAudio() async {
+    try {
+      await _audioPlayer.setAsset(
+        'assets/audio/screen_transition/push-page-forward-single-chime.wav',
+      );
+      _audioPlayer.play();
+    } catch (e) {
+      debugPrint("Error loading Navigator.push audio: $e");
+    }
+  }
+
   void _navigate(BuildContext context, Widget screen) {
+    _pushAudio();
     HapticFeedback.lightImpact();
     Navigator.push(
       context,
@@ -47,7 +73,7 @@ class CategoryCard extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
-          colors: [primaryColor, secondaryColor],
+          colors: [widget.primaryColor, widget.secondaryColor],
         ),
       ),
       height: 180.0,
@@ -56,14 +82,14 @@ class CategoryCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         clipBehavior: Clip.hardEdge,
         child: InkWell(
-          onTap: () => _navigate(context, screen),
+          onTap: () => _navigate(context, widget.screen),
           child: Container(
             alignment: Alignment.center,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: Text(
-              title,
+              widget.title,
               style: kHeadingTextStyle.copyWith(
                 fontSize: 90.0,
                 letterSpacing: 4.0,

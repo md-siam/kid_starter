@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:just_audio/just_audio.dart';
 
 import '../constant.dart';
 
-class PageHeader extends StatelessWidget {
+class PageHeader extends StatefulWidget {
   final String title;
   final Color primaryColor;
   final Color secondaryColor;
@@ -14,6 +15,30 @@ class PageHeader extends StatelessWidget {
     required this.primaryColor,
     required this.secondaryColor,
   }) : super(key: key);
+
+  @override
+  State<PageHeader> createState() => _PageHeaderState();
+}
+
+class _PageHeaderState extends State<PageHeader> {
+  final _audioPlayer = AudioPlayer();
+
+  @override
+  void dispose() {
+    _audioPlayer.dispose();
+    super.dispose();
+  }
+
+  void _popAudio() async {
+    try {
+      await _audioPlayer.setAsset(
+        'assets/audio/screen_transition/pop-page-back-chime.wav',
+      );
+      _audioPlayer.play();
+    } catch (e) {
+      debugPrint("Error loading Navigator.pop audio: $e");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +52,7 @@ class PageHeader extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
-            colors: [primaryColor, secondaryColor],
+            colors: [widget.primaryColor, widget.secondaryColor],
           ),
           image: const DecorationImage(
             image: AssetImage("assets/images/bg-stars.png"),
@@ -41,6 +66,7 @@ class PageHeader extends StatelessWidget {
               alignment: Alignment.topLeft,
               child: GestureDetector(
                 onTap: () {
+                  _popAudio();
                   HapticFeedback.lightImpact();
                   Navigator.pop(context);
                 },
@@ -62,7 +88,7 @@ class PageHeader extends StatelessWidget {
                     height: 80,
                     alignment: Alignment.center,
                     child: Text(
-                      title,
+                      widget.title,
                       style: kHeadingTextStyle,
                     ),
                   ),

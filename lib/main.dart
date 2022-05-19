@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'app/constant.dart';
+import 'app/screens/home_screen.dart';
 import 'app/splash_screen.dart';
 
 void main() {
