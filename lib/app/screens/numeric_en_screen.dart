@@ -52,6 +52,7 @@ class _NumericEnScreenState extends State<NumericEnScreen> {
           ),
           Expanded(
             child: GridView.builder(
+              physics: const BouncingScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 20.0,

@@ -75,6 +75,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: <Widget>[
             SliverAppBar(
               expandedHeight: 188.0,

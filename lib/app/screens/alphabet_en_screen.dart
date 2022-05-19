@@ -52,6 +52,7 @@ class _AlphabetEnScreenState extends State<AlphabetEnScreen> {
           ),
           Expanded(
             child: GridView.builder(
+              physics: const BouncingScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 20.0,
