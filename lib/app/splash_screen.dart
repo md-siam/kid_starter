@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:just_audio/just_audio.dart';
 
 import 'screens/home_screen.dart';
 
@@ -16,14 +17,25 @@ class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   late AnimationController scaleController;
   late Animation<double> scaleAnimation;
+  final _audioPlayer = AudioPlayer();
 
   double _opacity = 0;
   bool _value = true;
 
+  void _introAudio() async {
+    try {
+      await _audioPlayer.setAsset('assets/audio/intro/mystical-wind-chimes.mp3');
+      _audioPlayer.setVolume(2.0);
+      _audioPlayer.play();
+    } catch (e) {
+      debugPrint("Error loading intro audio: $e");
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-
+    _introAudio();
     scaleController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 600),
@@ -58,6 +70,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   void dispose() {
+    _audioPlayer.dispose();
     scaleController.dispose();
     super.dispose();
   }
