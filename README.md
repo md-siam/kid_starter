@@ -20,7 +20,7 @@ In addition to the package, for accurate `color` pronunciation, the audio files 
 ```
 
  <p align="center">
-    <a href="https://drive.google.com/file/d/1LRT5_7tbE552yoSTRp5EHK6qRqbZaJFO/view?usp=sharing" target="_blank"><img src="screenshots/download_apk/download.png" height="100" ></img></a>
+    <a href="https://drive.google.com/file/d/19eJZsr0iSXUbuKd6pZLurC1zwUqFAPXY/view?usp=sharing" target="_blank"><img src="screenshots/download_apk/download.png" height="100" ></img></a>
   </p>
 
 ## App Demo
