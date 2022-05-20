@@ -13,7 +13,7 @@ Since it's an open-source project, the source code is governed by an MIT-style l
 ## Packages Used
 
 This application is using one third-party package from the open-source community. Thanks to the developers of <a href = "https://pub.dev/packages/just_audio">just_audio: ^0.9.21 </a> for this amazing package. The purpose of using this package is to play audio files in the flutter application. It's a <a href = "https://docs.flutter.dev/development/packages-and-plugins/favorites">Flutter Favorite</a> package.<br>
-In addition to the package, for accurate color pronunciation, the audio files are from <a href = "https://www.macmillandictionary.com/">macmillan dictionary</a>.
+In addition to the package, for accurate `color` pronunciation, the audio files are from <a href = "https://www.macmillandictionary.com/">macmillan dictionary</a>.
 
 ```
   just_audio: ^0.9.21   //For playing audio files
