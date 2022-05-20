@@ -35,7 +35,7 @@ class _ColorScreenState extends State<ColorScreen> {
 
   @override
   void dispose() {
-     _scrollController.dispose();
+    _scrollController.dispose();
     _audioPlayer.dispose();
     super.dispose();
   }
@@ -49,7 +49,6 @@ class _ColorScreenState extends State<ColorScreen> {
   void _playAudio(String assetPath) async {
     try {
       await _audioPlayer.setAsset(assetPath);
-      _audioPlayer.setVolume(10.0);
       _audioPlayer.play();
     } catch (e) {
       debugPrint("Error loading audio source: $e");
