@@ -89,6 +89,12 @@ flutter:
         - asset: assets/fonts/CabinSketch-Bold.ttf
           weight: 700
         - asset: assets/fonts/CabinSketch-Regular.ttf
+    - family: AdorshoLipi
+      fonts:
+        - asset: assets/fonts/AdorshoLipi.ttf
+    - family: CharuChandan3D
+      fonts:
+        - asset: assets/fonts/CharuChandan3D-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

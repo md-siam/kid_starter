@@ -16,7 +16,7 @@ This application is using one third-party package from the open-source community
 In addition to the package, for accurate `color` pronunciation, the audio files are from <a href = "https://www.macmillandictionary.com/">macmillan dictionary</a>.
 
 ```
-  just_audio: ^0.9.21   //For playing audio files
+  just_audio: ^0.9.24   //For playing audio files
 ```
 
  <p align="center">
