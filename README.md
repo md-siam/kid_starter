@@ -30,24 +30,24 @@ In addition to the package, for accurate `color` pronunciation, the audio files 
 ## File Pattern Inside The `lib` Folder
 
 ```
-lib
-├── app
-│   ├── controllers
+lib/
+├── app/
+│   ├── controllers/
 │   │   ├── alphabet_en_controller.dart
 │   │   ├── color_controller.dart
 │   │   └── numeric_en_controller.dart
-│   ├── models
+│   ├── models/
 │   │   ├── alphabet_en_model.dart
 │   │   ├── color_model.dart
 │   │   └── numeric_en_model.dart
-│   ├── screens
+│   ├── screens/
 │   │   ├── alphabet_en_screen.dart
 │   │   ├── color_screen.dart
 │   │   ├── home_screen.dart
 │   │   ├── numeric_en_screen.dart
 │   │   ├── shape_screen.dart
 │   │   └── story_screen.dart
-│   ├── widgets
+│   ├── widgets/
 │   │   ├── category_card.dart
 │   │   ├── page_header.dart
 │   │   └── tile_card.dart
