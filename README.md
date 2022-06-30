@@ -27,6 +27,16 @@ In addition to the package, for accurate `color` pronunciation, the audio files 
 
 <p align="center"><img src="screenshots/gif/demo.gif"></p>
 
+## Tasks for the contributors
+```
+  1. Stories
+  2. Shapes 
+  3. Bangla (অ আ ক খ)
+  4. Bangla (১ ২ ৩)
+  5. If you have problem with understanding the code, 
+     then just edit the README.md file
+```
+
 ## File Pattern Inside The `lib` Folder
 
 ```
