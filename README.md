@@ -23,10 +23,6 @@ In addition to the package, for accurate `color` pronunciation, the audio files 
     <a href="https://drive.google.com/file/d/19eJZsr0iSXUbuKd6pZLurC1zwUqFAPXY/view?usp=sharing" target="_blank"><img src="screenshots/download_apk/download.png" height="100" ></img></a>
   </p>
 
-## App Demo
-
-<p align="center"><img src="screenshots/gif/demo.gif"></p>
-
 ## Tasks for the contributors
 ```
   1. Stories
@@ -36,6 +32,10 @@ In addition to the package, for accurate `color` pronunciation, the audio files 
   5. If you have problem with understanding the code, 
      then just edit the README.md file
 ```
+
+## App Demo
+
+<p align="center"><img src="screenshots/gif/demo.gif"></p>
 
 ## File Pattern Inside The `lib` Folder
 
