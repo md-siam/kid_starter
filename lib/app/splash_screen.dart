@@ -24,7 +24,8 @@ class _SplashScreenState extends State<SplashScreen>
 
   void _introAudio() async {
     try {
-      await _audioPlayer.setAsset('assets/audio/intro/mystical-wind-chimes.mp3');
+      await _audioPlayer
+          .setAsset('assets/audio/intro/mystical-wind-chimes.mp3');
       _audioPlayer.setVolume(2.0);
       _audioPlayer.play();
     } catch (e) {
@@ -81,9 +82,9 @@ class _SplashScreenState extends State<SplashScreen>
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
+            children: [
               Padding(
                 padding: EdgeInsets.only(top: 80),
                 child: Text(
