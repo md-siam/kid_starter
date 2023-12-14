@@ -70,6 +70,7 @@ flutter:
     - assets/audio/alphabet_en/
     - assets/audio/color/
     - assets/audio/numeric_en/
+    - assets/audio/animal/
     - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see

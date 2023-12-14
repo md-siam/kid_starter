@@ -15,8 +15,12 @@ void main() {
   ///
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then(
+    (_) => runApp(const MyApp()),
   );
+  // SystemChrome.setPreferredOrientations(
+  //   [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  // );
   runApp(const MyApp());
 }
 
@@ -31,12 +35,11 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         fontFamily: "CabinSketch",
         textTheme: const TextTheme(
-          bodyText1: TextStyle(color: kBodyTextColor),
+          bodyLarge: TextStyle(color: kBodyTextColor),
         ),
       ),
       //home: const HomeScreen(),
       home: const SplashScreen(),
-
     );
   }
 }
