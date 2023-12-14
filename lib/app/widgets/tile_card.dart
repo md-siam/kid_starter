@@ -9,6 +9,7 @@ class TileCard extends StatelessWidget {
   final Color backgroundColor;
   final double fontSizeBase;
   final double fontSizeActive;
+  
   final VoidCallback onTap;
 
   const TileCard({
