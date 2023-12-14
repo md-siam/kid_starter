@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kid_starter/app/screens/animal_screen.dart';
 
 import '../widgets/category_card.dart';
 import 'alphabet_en_screen.dart';
@@ -13,6 +14,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Widget> categories = [
+      CategoryCard(
+        title: 'Animals',
+        primaryColor: Colors.purpleAccent[100]!,
+        secondaryColor: Colors.purple,
+        screen: AnimalScreen(
+          title: 'Animals',
+          primaryColor: Colors.purpleAccent[100]!,
+          secondaryColor: Colors.purple,
+        ),
+      ),
       CategoryCard(
         title: 'Colors',
         primaryColor: Colors.orangeAccent[100]!,

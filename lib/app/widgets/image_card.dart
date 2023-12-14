@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 
 import '../constant.dart';
 
-class TileCard extends StatelessWidget {
+class ImageCard extends StatelessWidget {
   final bool isActive;
   final String title;
-  final Color textColor;
+  final String image;
   final Color backgroundColor;
   final double fontSizeBase;
   final double fontSizeActive;
   
   final VoidCallback onTap;
 
-  const TileCard({
+  const ImageCard({
     Key? key,
     this.isActive = false,
     required this.title,
-    this.textColor = kTitleTextColor,
+    required this.image,
     this.backgroundColor = Colors.white,
     this.fontSizeBase = 130,
     this.fontSizeActive = 180,
@@ -52,14 +52,9 @@ class TileCard extends StatelessWidget {
                   : TextStyle(fontSize: fontSizeBase),
               duration: const Duration(milliseconds: 400),
               curve: Curves.bounceOut,
-              child: Text(
-                title,
-                style: TextStyle(
-                  color: textColor,
-                  fontFamily: 'CabinSketch',
-                  fontWeight: FontWeight.w700,
-                ),
-                softWrap: false,
+              child: Image.asset(
+                image,
+                fit: BoxFit.cover,
               ),
             ),
           ),

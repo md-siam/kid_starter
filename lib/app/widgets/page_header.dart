@@ -9,6 +9,7 @@ class PageHeader extends StatefulWidget {
   final Color primaryColor;
   final Color secondaryColor;
   final double offset;
+  final VoidCallback? onTap;
 
   const PageHeader({
     Key? key,
@@ -16,6 +17,7 @@ class PageHeader extends StatefulWidget {
     required this.primaryColor,
     required this.secondaryColor,
     required this.offset,
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -82,17 +84,20 @@ class _PageHeaderState extends State<PageHeader> {
               ),
             ),
             Expanded(
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Positioned(
-                    top: 30 - widget.offset / 4,
-                    child: Text(
-                      widget.title,
-                      style: kHeadingTextStyle,
+              child: InkWell(
+                onTap: widget.onTap,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                      top: 30 - widget.offset / 4,
+                      child: Text(
+                        widget.title,
+                        style: kHeadingTextStyle,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
