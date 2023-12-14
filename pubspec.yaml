@@ -40,6 +40,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   # For playing audio files
   just_audio: ^0.9.24
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -70,8 +71,10 @@ flutter:
     - assets/audio/alphabet_en/
     - assets/audio/color/
     - assets/audio/numeric_en/
-    - assets/audio/animal/
+    - assets/audio/animals/
+
     - assets/images/
+    - assets/images/animals/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
