@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:kid_starter/app/controllers/animal_controller.dart';
-import 'package:kid_starter/app/widgets/image_card.dart';
 
-import '../constant.dart';
-import '../controllers/alphabet_en_controller.dart';
+import '../controllers/animal_controller.dart';
+import '../widgets/image_card.dart';
 import '../widgets/page_header.dart';
-import '../widgets/tile_card.dart';
 
 class AnimalScreen extends StatefulWidget {
   final String title;
